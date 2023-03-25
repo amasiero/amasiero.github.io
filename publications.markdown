@@ -4,12 +4,12 @@ title: Publications
 permalink: /publications/
 ---
 ## 2021
-Masiero, A. A. . **Arquitetura de software**. Editora Senac São Paulo, 2021. [Link][arquitetura-software]
+Masiero, A. A. . **Arquitetura de software**. Editora Senac São Paulo, 2021. [Amazon][arquitetura-software]
 
-Oberleitner, A.; Masiero, A. A. . **Programação orientada a objetos**. Editora Senac São Paulo, 2021. [Link][poo]
+Oberleitner, A.; Masiero, A. A. . **Programação orientada a objetos**. Editora Senac São Paulo, 2021. [Amazon][poo]
 
 ## 2020
-Masiero, A. A. . **Algoritmos e programação II**. Editora Senac São Paulo, 2020. [Link][algoritmos]
+Masiero, A. A. . **Algoritmos e programação II**. Editora Senac São Paulo, 2020. [Amazon][algoritmos]
 
 ## 2016
 Morais, G. D. ; Neves, L. C. ; Masiero, A. A. ; Castro, M. C. F. . **Application of Myo Armband System to Control a Robot Interface**. In: 9th International Conference on Bio-inspired Systems and Signal Processing – BIOSIGNALS 2016, 2016, Roma. BIOSTEC 2016 – 9th International Joint Conference on Biomedical Engineering Systems and Technologies. Portugal: SCITEPRESS – Science and and Technology Publications, 2016. v. 4. p. 227-231.
@@ -50,7 +50,7 @@ Masiero, A. A. ; Destro, R. C. ; Aquino Jr., P. T. . **Processo de Criação de 
 ## 2010
 Aquino Jr., P. T. ; Masiero, A. A. ; Wachs, G. ; Gonçalves, M. H. P. . **Gerenciamento de Conteúdo de Projeto Web com Patterns e Anti-Patterns de Interface Variáveis com Múltiplas Camadas de Perfis**. In: CONFERÊNCIA IADIS IBERO-AMERICANA WWW/INTERNET 2010, 2010, Algarve. Actas da Conferência IADIS IBERO-AMERICANA WWW/INTERNET 2010. Lisboa: IADIS Press, 2010. v. 2010. p. 205-212.
 
-2008
+## 2008
 Masiero, A. A. ; Wachs, G. ; Gonçalves, M. H. P. ; Aquino Jr., P. T. . **Anti-patterns Apoiando a Documentação dos Problemas de Usabilidade**. Hífen (PUCRS. Impresso), v. 32, p. 189-196, 2008.
 
 [arquitetura-software]: https://amzn.to/3n9SDKz
