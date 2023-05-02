@@ -1,4 +1,6 @@
 main:
+  - title: "Certificates"
+    url: /certificates
   - title: "Publications"
     url: /publications
   - title: "About me"
