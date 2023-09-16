@@ -81,7 +81,7 @@ baidu_site_verification  :
 
 # Social Sharing
 twitter:
-  username               : amasiero
+  username               : 
 facebook:
   username               :
   app_id                 :
@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Andrey Masiero"
   avatar           : https://avatars.githubusercontent.com/u/1767253?v=4 
-  bio              : "The art of coding is for the people"
+  bio              : "Coding for passion"
   location         : "Lisbon, Portugal"
   email            : "andreymasiero@gmail.com"
   links:
@@ -116,18 +116,18 @@ author:
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
     #   # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/amasiero"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/amasiero"
     # - label: "Facebook"
     #   icon: "fab fa-fw fa-facebook-square"
     #   # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/amasiero"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/andreymasiero"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/andreymasiero"
 
 # Site Footer
 footer:
