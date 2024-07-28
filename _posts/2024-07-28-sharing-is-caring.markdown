@@ -15,4 +15,4 @@ For each post, I will try to provide practical examples and references and balan
 
 Please enjoy reading as much as I'm enjoying writing this for you.
 
-We will meet in the next post :)
+We will meet in the next post.
