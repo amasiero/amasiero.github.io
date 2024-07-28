@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Sharing is caring"
 date: 2024-07-28 17:35:28 +0000
 tags: miscellaneous
