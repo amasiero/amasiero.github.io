@@ -4,11 +4,11 @@ title: About me
 permalink: /about/
 ---
 
-I'm **Andrey Masiero**, a **Platform Engineer**, **consultant**, **speaker**, and **lifelong learner**.
+My name is **Andrey Masiero**. I am an **Application Engineer**. I am passionate about learning and discovering new domains and technologies.
 
-My interests include **domain-driven design**, **software architectures**, **distributed web applications**, **optimizations**, **design systems**, and **front-end** development.
+My current interests include **Domain-Driven Design**, **Software Architecture**, **Distributed Systems**, **Optimization**, **System Design**,  **Developer Experience**, and **Cloud** development.
 
-I strive to write **better code**, enhance **developer experience**, learn **new technologies**, and understand the **human factors** in **software engineering**.
+I strive to write **better code**, enhance the **developer experience**, learn **new technologies**, and understand **human factors** in **software engineering**.
 
 While my primary language is **Java**, I also enjoy working with **Python** and **JavaScript/TypeScript**.
 
