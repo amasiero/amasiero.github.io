@@ -212,8 +212,8 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+# paginate: 5 # amount of posts to show
+# paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Plugins (previously gems:)
@@ -224,6 +224,7 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-data
+  - jekyll-paginate-v2
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -300,3 +301,12 @@ collections:
   certificates:
     output: true
     permalink: /certificates/:title/
+
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/blog/page:num/'
+  title: ':title'
+  trail:
+    before: 2
+    after: 2
