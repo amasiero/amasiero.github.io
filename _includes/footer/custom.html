@@ -1,0 +1,49 @@
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌓 Theme</button>
+<style>
+  .theme-toggle{position:fixed;right:14px;bottom:14px;z-index:9999;padding:8px 10px;border-radius:10px;border:1px solid #ccc;background:transparent}
+</style>
+
+<script>
+  (function(){
+    var btn = document.getElementById('theme-toggle');
+    if (!btn || !window.__applyTheme) return;
+
+    // Force dark theme the very first time (no saved preference)
+    if (!localStorage.getItem('theme')) {
+      localStorage.setItem('theme', 'dark');
+      window.__applyTheme('dark');
+    }
+
+    function updateLabel(){
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark') btn.textContent = '🌙';
+      else if (saved === 'light') btn.textContent = '🔆';
+      else btn.textContent = '🌓 Theme';
+    }
+    updateLabel();
+
+    function current(){
+      var saved = localStorage.getItem('theme');
+      if (saved) return saved;
+      // if you want system default detection here, flip to matchMedia:
+      return 'light';
+    }
+    btn.addEventListener('click', function(){
+      var next = current() === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      window.__applyTheme(next);
+
+      // OPTIONAL: sync Utterances comments theme if you use it
+      try {
+        var iframe = document.querySelector('iframe.utterances-frame');
+        if (iframe && iframe.contentWindow) {
+          iframe.contentWindow.postMessage(
+            { type:'set-theme', theme: next === 'dark' ? 'github-dark' : 'github-light' },
+            'https://utteranc.es'
+          );
+        }
+      } catch(e){}
+      updateLabel();
+    });
+  })();
+</script>

@@ -12,22 +12,22 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 remote_theme: "mmistakes/minimal-mistakes"
-# minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale: "en-US"
-title: "Andrey Masiero | Software Engineering"
+title: "Andrey Masiero"
 title_separator: "|"
-subtitle: # site tagline that appears below site title in masthead
+subtitle: "Software Engineer • Domain-Driven Design • Modern Java"
 name: "Andrey Masiero"
-description: ""
-url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+description: "Software Engineer specialized in Domain-Driven Design, System Design, and Modern Java. Helping teams craft scalable, observable software that endures."
+url: "https://amasiero.me"
 baseurl: "" # the subpath of your site, e.g. "/blog"
 repository: "amasiero/amasiero.github.io"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+breadcrumbs: true # true, false (default)
 words_per_minute: 250
 comments:
   provider: "utterances" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -41,7 +41,7 @@ comments:
     num_posts: # 5 (default)
     colorscheme: # "light" (default), "dark"
   utterances:
-    theme: "github-light" # "github-light" (default), "github-dark"
+    theme: "preferred_color_scheme" # "github-light" (default), "github-dark"
     issue_term: "pathname" # "pathname" (default)
   giscus:
     repo_id: # Shown during giscus setup at https://giscus.app
@@ -271,15 +271,32 @@ compress_html:
 
 # Defaults
 defaults:
-  # _posts
   - scope:
       path: ""
-      type: posts
+      type: "posts"
     values:
-      show_date: true
-      layout: single
+      layout: "single"
       author_profile: true
-      read_time: true
       comments: true
-      share: true
-      related: true
+      read_time: true
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "single"
+      author_profile: true
+  - scope:
+      path: ""
+      type: "certificates"
+    values:
+      layout: "single"
+      author_profile: true
+
+
+collections:
+  publications:
+    output: true
+    permalink: /publications/:title/
+  certificates:
+    output: true
+    permalink: /certificates/:title/
