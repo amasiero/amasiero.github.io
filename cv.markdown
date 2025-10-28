@@ -263,5 +263,5 @@ Machine Learning, Computer Vision, Robotics Automation, ROS, TensorFlow, Human�
 
 📧 [andreymasiero@gmail.com](mailto:andreymasiero@gmail.com)  
 🌐 [amasiero.me](https://amasiero.me)  
-💼 [LinkedIn](https://linkedin.com/in/andrey-masiero)  
+💼 [LinkedIn](https://linkedin.com/in/andreymasiero)  
 🐙 [GitHub](https://github.com/amasiero)
