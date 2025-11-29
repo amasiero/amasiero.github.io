@@ -1,8 +1,25 @@
----
----
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: "default" }}";
+--- 
+--- 
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: " default" }}";
 @import "minimal-mistakes";
 
 .theme-toggle:focus {
   outline: 0;
+}
+
+.theme-toggle {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1;
+  margin-left: 1rem;
+  /* spacing from the last menu item */
+}
+
+.masthead .greedy-nav {
+  align-items: center;
 }
