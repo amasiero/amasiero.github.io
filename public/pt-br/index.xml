@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Andrey Masiero</title>
+        <link>http://localhost:1313/pt-br/</link>
+        <description>Recent content on Andrey Masiero</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>pt-br</language>
+        <copyright>Andrey Masiero</copyright>
+        <lastBuildDate>Mon, 01 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/pt-br/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Sobre</title>
+        <link>http://localhost:1313/pt-br/sobre/</link>
+        <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/pt-br/sobre/</guid>
+        <description>&lt;p&gt;Meu nome é &lt;strong&gt;Andrey Masiero&lt;/strong&gt;. sou um &lt;strong&gt;Application Engineer&lt;/strong&gt;. Apaixonado por aprender e explorar novos domínios e tecnologias.&lt;/p&gt;
+&lt;p&gt;Meus interesses atuais encontram-se em &lt;strong&gt;Domain-Driven Design&lt;/strong&gt;, &lt;strong&gt;Arquitetura de Software&lt;/strong&gt;, &lt;strong&gt;Sistemas Distribuídos&lt;/strong&gt;, &lt;strong&gt;Otimização&lt;/strong&gt;, &lt;strong&gt;System Design&lt;/strong&gt;,  &lt;strong&gt;Developer Experience&lt;/strong&gt;, e desenvolvimento para ambientes &lt;strong&gt;Cloud&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Procuro sempre escrever &lt;strong&gt;códigos melhores&lt;/strong&gt;, melhorar a &lt;strong&gt;experiência do desenvolvedor&lt;/strong&gt;, aprender &lt;strong&gt;novas tecnologias&lt;/strong&gt;, e compreender &lt;strong&gt;fatores humanos&lt;/strong&gt; em &lt;strong&gt;engenharia de software&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Minha linguagem principal é &lt;strong&gt;Java&lt;/strong&gt;, mas também gosto de trabalhar com &lt;strong&gt;Python&lt;/strong&gt; e &lt;strong&gt;JavaScript/TypeScript&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;No meu tempo livre, você pode me encontrar &lt;strong&gt;fotogrando&lt;/strong&gt;, &lt;strong&gt;correndo&lt;/strong&gt; e &lt;strong&gt;lendo livros&lt;/strong&gt;.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Como manter o aprendizado contínuo</title>
+        <link>http://localhost:1313/pt-br/p/como-manter-o-aprendizado-cont%C3%ADnuo/</link>
+        <pubDate>Mon, 01 Dec 2025 00:00:00 +0100</pubDate>
+        
+        <guid>http://localhost:1313/pt-br/p/como-manter-o-aprendizado-cont%C3%ADnuo/</guid>
+        <description>&lt;p&gt;Versão em português aqui.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Arquivos</title>
+        <link>http://localhost:1313/pt-br/archives/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/pt-br/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Busca</title>
+        <link>http://localhost:1313/pt-br/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/pt-br/search/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Curriculum</title>
+        <link>http://localhost:1313/pt-br/cv/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/pt-br/cv/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>
