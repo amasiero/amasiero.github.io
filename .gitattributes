@@ -1,0 +1,40 @@
+# Normalize text files (LF line endings in repo)
+* text=auto eol=lf
+
+# Windows-specific scripts (if you ever add them)
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Treat these as text explicitly
+*.md   text
+*.html text
+*.css  text
+*.js   text
+*.json text
+*.toml text
+*.yaml text
+*.yml  text
+
+# Images & binary assets
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+*.svg  text   # SVG is XML, keep as text for better diffs
+
+# Fonts & binaries
+*.ttf  binary
+*.otf  binary
+*.woff binary
+*.woff2 binary
+*.pdf  binary
+*.zip  binary
+
+# Hugo generated stuff (if it ever gets committed by accident)
+public/**          linguist-generated
+resources/_gen/** linguist-generated
+
+# Theme as vendored code (don’t count in GitHub language stats)
+themes/** linguist-vendored
