@@ -22,19 +22,19 @@
 *.gif  binary
 *.webp binary
 *.ico  binary
-*.svg  text   # SVG is XML, keep as text for better diffs
+*.svg  text
 
 # Fonts & binaries
-*.ttf  binary
-*.otf  binary
-*.woff binary
+*.ttf   binary
+*.otf   binary
+*.woff  binary
 *.woff2 binary
-*.pdf  binary
-*.zip  binary
+*.pdf   binary
+*.zip   binary
 
 # Hugo generated stuff (if it ever gets committed by accident)
 public/**          linguist-generated
-resources/_gen/** linguist-generated
+resources/_gen/**  linguist-generated
 
 # Theme as vendored code (don’t count in GitHub language stats)
-themes/** linguist-vendored
+themes/**          linguist-vendored
