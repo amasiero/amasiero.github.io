@@ -7,7 +7,7 @@ aliases:
   - contato
 license: CC BY-NC-ND
 lastmod: '2025-12-01'
-
+comments: false
 menu:
     main: 
         weight: -90
