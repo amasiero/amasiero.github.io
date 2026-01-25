@@ -30,7 +30,7 @@ services:
     googleAnalytics:
         id: G-SMM7LLM46T
 
-paginate:
+pagination:
     pagerSize: 3
 
 permalinks:
