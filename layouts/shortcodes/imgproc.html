@@ -1,0 +1,46 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $size := .Get "size" | default "800x" -}}
+{{- $q := .Get "q" | default "85" -}}
+{{- $class := .Get "class" | default "" -}}
+{{- $style := .Get "style" | default "" -}}
+{{- $link := .Get "link" | default "false" -}} {{/* "true" to link to original */}}
+
+{{- $img := $.Page.Resources.Get $src -}}
+{{- if not $img -}}
+    {{- errorf "imgproc: image not found: %q in %q" $src $.Page.File.Path -}}
+{{- else -}}
+
+  {{- /* Produce an optimized webp */ -}}
+    {{- $spec := printf "%s webp q%s" $size $q -}}
+    {{- $out := $img.Resize $spec -}}
+
+    <figure class="post-figure {{ $class }}" style="{{ $style }}">
+        {{- if eq $link "true" -}}
+            <a href="{{ $img.RelPermalink }}" target="_blank" rel="noopener">
+                <img
+                src="{{ $out.RelPermalink }}"
+                width="{{ $out.Width }}"
+                height="{{ $out.Height }}"
+                alt="{{ $alt }}"
+                loading="lazy"
+                decoding="async"
+                />
+            </a>
+    {{- else -}}
+        <img
+            src="{{ $out.RelPermalink }}"
+            width="{{ $out.Width }}"
+            height="{{ $out.Height }}"
+            alt="{{ $alt }}"
+            loading="lazy"
+            decoding="async"
+        />
+    {{- end -}}
+
+    {{- if $alt -}}
+        <figcaption>{{ $alt }}</figcaption>
+    {{- end -}}
+    </figure>
+
+{{- end -}}

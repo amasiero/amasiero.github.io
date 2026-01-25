@@ -1,0 +1,29 @@
+{{- $author := .Get "author" | default "" -}}
+{{- $source := .Get "source" | default "" -}}
+{{- $href := .Get "href" | default "" -}}
+{{- $cite := .Get "cite" | default "" -}}
+{{- $class := .Get "class" | default "" -}}
+
+<figure class="quote {{ $class }}">
+  <blockquote{{ with $cite }} cite="{{ . }}"{{ end }}>
+    {{ .Inner | markdownify }}
+  </blockquote>
+
+  {{- if or $author $source -}}
+    <figcaption>
+      {{- if $author -}}
+        <span class="quote__author">— {{ $author }}</span>
+      {{- end -}}
+
+      {{- if $source -}}
+        <span class="quote__source">
+          {{- if $href -}}
+            , <a href="{{ $href }}" target="_blank" rel="noopener">{{ $source }}</a>
+          {{- else -}}
+            , {{ $source }}
+          {{- end -}}
+        </span>
+      {{- end -}}
+    </figcaption>
+  {{- end -}}
+</figure>
