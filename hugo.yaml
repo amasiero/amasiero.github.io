@@ -1,4 +1,4 @@
-baseurl: https://amasiero.me/
+baseurl: "https://amasiero.me/"
 languageCode: en-us
 theme: hugo-theme-stack
 title: Andrey Masiero
@@ -30,7 +30,7 @@ services:
     googleAnalytics:
         id: G-SMM7LLM46T
 
-pagination:
+paginate:
     pagerSize: 3
 
 permalinks:

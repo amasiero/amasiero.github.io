@@ -43,7 +43,7 @@ jobs:
 
       - name: Build site
         run: |
-          hugo --minify
+          hugo --minify --baseURL "https://amasiero.me/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
