@@ -25,7 +25,7 @@ languages:
 services:
     # Change it to your Disqus shortname before using
     disqus:
-        shortname: "andreymasiero"
+        shortname: "amasiero"
     # GA Tracking ID
     googleAnalytics:
         id: G-SMM7LLM46T
