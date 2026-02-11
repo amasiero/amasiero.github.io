@@ -1,0 +1,13 @@
+/* Base: show light, hide dark */
+.theme-img--light { display: inline; }
+.theme-img--dark  { display: none; }
+
+/* Dark explicitly */
+html[data-scheme="dark"] .theme-img--light { display: none; }
+html[data-scheme="dark"] .theme-img--dark  { display: inline; }
+
+/* Auto mode: follow OS */
+@media (prefers-color-scheme: dark) {
+    html[data-scheme="auto"] .theme-img--light { display: none; }
+    html[data-scheme="auto"] .theme-img--dark  { display: inline; }
+}

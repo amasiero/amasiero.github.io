@@ -1,46 +1,95 @@
-{{- $src := .Get "src" -}}
 {{- $alt := .Get "alt" | default "" -}}
 {{- $size := .Get "size" | default "800x" -}}
 {{- $q := .Get "q" | default "85" -}}
 {{- $class := .Get "class" | default "" -}}
 {{- $style := .Get "style" | default "" -}}
-{{- $link := .Get "link" | default "false" -}} {{/* "true" to link to original */}}
+{{- $link := .Get "link" | default "false" -}}
 
-{{- $img := $.Page.Resources.Get $src -}}
-{{- if not $img -}}
-    {{- errorf "imgproc: image not found: %q in %q" $src $.Page.File.Path -}}
-{{- else -}}
+{{- /* Backward compatible: src still works */ -}}
+{{- $src := .Get "src" -}}
+{{- $light := .Get "light" | default $src -}}
+{{- $dark := .Get "dark" -}}
 
-  {{- /* Produce an optimized webp */ -}}
-    {{- $spec := printf "%s webp q%s" $size $q -}}
-    {{- $out := $img.Resize $spec -}}
-
-    <figure class="post-figure {{ $class }}" style="{{ $style }}">
-        {{- if eq $link "true" -}}
-            <a href="{{ $img.RelPermalink }}" target="_blank" rel="noopener">
-                <img
-                src="{{ $out.RelPermalink }}"
-                width="{{ $out.Width }}"
-                height="{{ $out.Height }}"
-                alt="{{ $alt }}"
-                loading="lazy"
-                decoding="async"
-                />
-            </a>
-    {{- else -}}
-        <img
-            src="{{ $out.RelPermalink }}"
-            width="{{ $out.Width }}"
-            height="{{ $out.Height }}"
-            alt="{{ $alt }}"
-            loading="lazy"
-            decoding="async"
-        />
-    {{- end -}}
-
-    {{- if $alt -}}
-        <figcaption>{{ $alt }}</figcaption>
-    {{- end -}}
-    </figure>
-
+{{- $imgLight := $.Page.Resources.Get $light -}}
+{{- if not $imgLight -}}
+  {{- errorf "imgproc: image not found: %q in %q" $light $.Page.File.Path -}}
 {{- end -}}
+
+{{- $imgDark := "" -}}
+{{- if $dark -}}
+  {{- $imgDark = $.Page.Resources.Get $dark -}}
+  {{- if not $imgDark -}}
+    {{- errorf "imgproc: dark image not found: %q in %q" $dark $.Page.File.Path -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $spec := printf "%s webp q%s" $size $q -}}
+
+{{- /* Light output */ -}}
+{{- $lightSrc := $imgLight.RelPermalink -}}
+{{- $lightW := "" -}}
+{{- $lightH := "" -}}
+{{- if ne $imgLight.MediaType.SubType "svg" -}}
+  {{- $out := $imgLight.Resize $spec -}}
+  {{- $lightSrc = $out.RelPermalink -}}
+  {{- $lightW = $out.Width -}}
+  {{- $lightH = $out.Height -}}
+{{- end -}}
+
+{{- /* Dark output (optional) */ -}}
+{{- $darkSrc := "" -}}
+{{- $darkW := "" -}}
+{{- $darkH := "" -}}
+{{- if $imgDark -}}
+  {{- $darkSrc = $imgDark.RelPermalink -}}
+  {{- if ne $imgDark.MediaType.SubType "svg" -}}
+    {{- $outD := $imgDark.Resize $spec -}}
+    {{- $darkSrc = $outD.RelPermalink -}}
+    {{- $darkW = $outD.Width -}}
+    {{- $darkH = $outD.Height -}}
+  {{- end -}}
+{{- end -}}
+
+<figure class="post-figure {{ $class }}" style="{{ $style }}">
+  {{- if eq $link "true" -}}
+    <a href="{{ $imgLight.RelPermalink }}" target="_blank" rel="noopener">
+  {{- end -}}
+
+  {{- if $imgDark -}}
+    <img
+      class="theme-img theme-img--light"
+      src="{{ $lightSrc }}"
+      {{- with $lightW }} width="{{ . }}"{{- end -}}
+      {{- with $lightH }} height="{{ . }}"{{- end -}}
+      alt="{{ $alt }}"
+      loading="lazy"
+      decoding="async"
+    />
+    <img
+      class="theme-img theme-img--dark"
+      src="{{ $darkSrc }}"
+      {{- with $darkW }} width="{{ . }}"{{- end -}}
+      {{- with $darkH }} height="{{ . }}"{{- end -}}
+      alt="{{ $alt }}"
+      loading="lazy"
+      decoding="async"
+    />
+  {{- else -}}
+    <img
+      src="{{ $lightSrc }}"
+      {{- with $lightW }} width="{{ . }}"{{- end -}}
+      {{- with $lightH }} height="{{ . }}"{{- end -}}
+      alt="{{ $alt }}"
+      loading="lazy"
+      decoding="async"
+    />
+  {{- end -}}
+
+  {{- if eq $link "true" -}}
+    </a>
+  {{- end -}}
+
+  {{- if $alt -}}
+    <figcaption>{{ $alt }}</figcaption>
+  {{- end -}}
+</figure>

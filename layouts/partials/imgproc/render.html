@@ -1,0 +1,11 @@
+{{- /* inputs: dict "img" . "spec" "800x webp q85" */ -}}
+{{- $img := .img -}}
+{{- $spec := .spec -}}
+
+{{- if eq $img.MediaType.SubType "svg" -}}
+    {{- /* No Resize for SVG */ -}}
+    {{- return (dict "src" $img.RelPermalink "width" "" "height" "") -}}
+{{- else -}}
+    {{- $out := $img.Resize $spec -}}
+    {{- return (dict "src" $out.RelPermalink "width" $out.Width "height" $out.Height) -}}
+{{- end -}}
